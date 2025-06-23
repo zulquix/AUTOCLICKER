@@ -9,7 +9,7 @@ if %errorlevel% neq 0 (
     set "PYTHON_URL=https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe"
     set "PYTHON_INSTALLER=%TEMP%\python-installer.exe"
 
-    REM Download installer using PowerShell
+
     powershell -Command "Invoke-WebRequest -Uri %PYTHON_URL% -OutFile '%PYTHON_INSTALLER%'"
 
     if not exist "%PYTHON_INSTALLER%" (
